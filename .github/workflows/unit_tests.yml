@@ -1,8 +1,16 @@
+on:
+  pull_request:
+    branches:
+      - main
 
-Steps:
-- name: Test unit tests with pytest
-  run: |
-    pip install pytest
-    pytest example_functions.py 
-    pytest test_examples.py
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Test unit tests with pytest
+      run: |
+        pip install pytest
+        pytest example_functions.py 
+        pytest test_examples.py
 
