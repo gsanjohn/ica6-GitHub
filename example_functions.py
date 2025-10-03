@@ -18,7 +18,7 @@ def my_adder(a, b, c):
     return out
 
 
-@pytest.mark.parametrize("a, b, c, sum", [(1, 1, 1, 5), (2, 2, 2, 6), (1, 2, 3, 6)])
+@pytest.mark.parametrize("a, b, c, sum", [(1, 1, 1, 3), (2, 2, 2, 6), (1, 2, 3, 6)])
 def test_my_adder(a, b, c, sum):
     output = my_adder(a, b, c)
     assert output == sum
